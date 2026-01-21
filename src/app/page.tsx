@@ -114,8 +114,12 @@ export default function InquirePage() {
           <p>
             After submitting this form, you will receive the project details in your Email, including the sample computation, within 24 hours. On the second day, we will call you to confirm that you have received and reviewed the details, and to confirm your DMCI Homes showroom or condo viewing. Please save this number: <strong>0953‑365‑7327</strong> Bryan Javelosa.
           </p>
+          <p>
+            After submitting this form, you will receive the project details in your Email, including the sample computation, within 24 hours. On the second day, we will call you to confirm that you have received and reviewed the details, and to confirm your DMCI Homes showroom or condo viewing. Please save this number: <strong>0953‑365‑7327</strong> Bryan Javelosa.
+          </p>
         </div>
       </div>
     </div>
   )
 }
+
