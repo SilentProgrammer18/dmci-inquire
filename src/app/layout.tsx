@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,28 +15,26 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DMCI Homes by Bryan Javelosa",
   description: "Official site for DMCI Homes managed by Bryan Javelosa",
+  openGraph: {
+    title: "DMCI Homes by Bryan Javelosa",
+    description: "Official site for DMCI Homes managed by Bryan Javelosa",
+    images: [
+      {
+        url: "/Images/dmciCondo.jpg", // this image will appear on Facebook
+        width: 1200,
+        height: 630,
+        alt: "DMCI Condo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Header with DMCI image */}
-        <header style={{ width: "100%", textAlign: "center", marginBottom: "2rem" }}>
-          <Image
-            src="/Images/dmciCondo.jpg"
-            alt="DMCI Condo"
-            width={1200}  // adjust width as needed
-            height={400}  // adjust height as needed
-            style={{ maxWidth: "100%", height: "auto" }}
-          />
-        </header>
-
-        {/* Main content */}
         <main>{children}</main>
       </body>
     </html>
